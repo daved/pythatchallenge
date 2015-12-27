@@ -19,7 +19,7 @@ func benchDataB() []string {
 
 func BenchmarkA_DavedDev(b *testing.B) {
 	for n := 0; n < b.N; n++ {
-		_, _ = ddpkg.Parse(benchDataA())
+		_ = ddpkg.Parse(benchDataA())
 	}
 }
 
@@ -44,7 +44,7 @@ func BenchmarkA_SRT(b *testing.B) {
 
 func BenchmarkB_DavedDev(b *testing.B) {
 	for n := 0; n < b.N; n++ {
-		_, _ = ddpkg.Parse(benchDataB())
+		_ = ddpkg.Parse(benchDataB())
 	}
 }
 

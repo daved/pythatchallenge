@@ -1,6 +1,6 @@
 package ddpkg
 
-func Parse(s []string) ([]string, error) {
+func Parse(s []string) []string {
 	r := s[:0]
 
 	b := make([]byte, totLen(s))
@@ -12,7 +12,7 @@ func Parse(s []string) ([]string, error) {
 		r = append(r, string(b))
 	}
 
-	return r, nil
+	return r
 }
 
 func nextVal(cur []string, old []string, i int, b []byte) ([]byte, int) {

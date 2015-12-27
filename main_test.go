@@ -42,13 +42,8 @@ func testData() []*IOTest {
 }
 
 func TestDavedDev(t *testing.T) {
-	for k, v := range testData() {
-		p, err := ddpkg.Parse(v.in)
-		if err != nil {
-			fmt.Printf("dd: test index %d: %s\n", k, err)
-
-			continue
-		}
+	for _, v := range testData() {
+		p := ddpkg.Parse(v.in)
 
 		if !isEqual(p, v.out) {
 			fmt.Printf("dd: want %s, got %s\n", pp(v.out), pp(p))
