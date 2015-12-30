@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"testing"
 
 	"github.com/daved/pythatchallenge/internal/daveddev"
@@ -26,7 +25,6 @@ func BenchmarkA_DavedDev(b *testing.B) {
 func BenchmarkA_DJHerbis(b *testing.B) {
 	for n := 0; n < b.N; n++ {
 		_ = djhpkg.Parse(benchDataA())
-		fmt.Printf("")
 	}
 }
 
@@ -51,7 +49,6 @@ func BenchmarkB_DavedDev(b *testing.B) {
 func BenchmarkB_DJHerbis(b *testing.B) {
 	for n := 0; n < b.N; n++ {
 		_ = djhpkg.Parse(benchDataB())
-		fmt.Printf("")
 	}
 }
 
